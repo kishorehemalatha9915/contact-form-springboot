@@ -1,4 +1,5 @@
 OVERVIEW:
+
 ContactHub is a full-stack web application designed to demonstrate the integration between a frontend user interface and a backend server using modern web development technologies. The project enables users to submit their contact information and messages through an interactive web form.
 The frontend is developed using HTML, CSS, and JavaScript, providing a simple and responsive user experience. The backend is built using Java and Spring Boot, which processes incoming form data through RESTful endpoints.
 This project helps learners understand the complete lifecycle of data flow in a web application—from user input in the browser to server-side processing and response generation. It serves as an excellent beginner-friendly example of full-stack application development and Spring Boot fundamentals.
