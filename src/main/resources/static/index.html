@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Form</title>
+</head>
+
+<body>
+
+<h2>Contact Form</h2>
+
+<form id="contactForm">
+
+    Name:
+    <input type="text" id="name"><br><br>
+
+    Email:
+    <input type="email" id="email"><br><br>
+
+    Message:
+    <textarea id="message"></textarea><br><br>
+
+    <button type="submit">Submit</button>
+
+</form>
+
+<script>
+    document.getElementById("contactForm")
+        .addEventListener("submit", function(event){
+
+            event.preventDefault();
+
+            let data = {
+                name: document.getElementById("name").value,
+                email: document.getElementById("email").value,
+                message: document.getElementById("message").value
+            };
+
+            fetch("/submit", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(data)
+            })
+                .then(response => response.text())
+                .then(result => alert(result));
+        });
+</script>
+
+</body>
+</html>
